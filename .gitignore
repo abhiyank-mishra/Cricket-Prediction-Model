@@ -1,0 +1,31 @@
+# Datasets and Raw Data
+Data/*.csv
+Data/**/*.csv
+Data/*.zip
+Data/**/*.zip
+*.crdownload
+
+# Machine Learning Serialized Models & Artifacts
+# Pushing 60MB+ .pkl models to Git without LFS will break your repo!
+models/*.pkl
+models/*.csv
+catboost_info/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Editor & OS Configurations
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
