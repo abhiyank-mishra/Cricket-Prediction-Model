@@ -3,6 +3,10 @@ Data/*.csv
 Data/**/*.csv
 *.crdownload
 
+# Do not track any downloaded zips
+Data/*.zip
+Data/**/*.zip
+
 # Machine Learning Serialized Models & Artifacts
 # We ignore these because retraining locally handles them!
 models/*.pkl

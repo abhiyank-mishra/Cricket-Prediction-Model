@@ -9,7 +9,7 @@ An advanced, real-time Machine Learning dashboard that predicts Cricket Match Wi
 
 ## 🚀 How to Run (On any New Laptop)
 
-The raw data (`.zip` files) are securely stored in this repository! You **do not** need to manually download CSV files from the internet. Just follow these steps:
+The raw data is NOT stored in Git to save space. A mega setup script will automatically stream it directly into your computer's RAM! Just follow these steps:
 
 1. **Clone the Repository** and enter the folder:
    ```bash
@@ -20,18 +20,17 @@ The raw data (`.zip` files) are securely stored in this repository! You **do not
 2. **Install Dependencies**:
    Ensure you have Python installed, then install the required AI libraries:
    ```bash
-   pip install streamlit pandas numpy scikit-learn lightgbm xgboost catboost plotly
+   pip install streamlit pandas numpy scikit-learn lightgbm xgboost catboost plotly requests
    ```
 
 3. **Initialize Data & Train Models (Run Once)**:
-   This will automatically extract all tracked `.zip` JSON datasets, build the massive 200MB CSV into memory, and train the Machine Learning `models/*.pkl` objects on your new machine.
+   This will completely automate the setup: Downloading massive Cricsheet archives stealthily into memory, parsing relevant India-context matches, producing a Mega CSV, and finally compiling/training all 4 Machine Learning models instantly.
    ```bash
-   python extract_and_train.py
-   python india_mens_model.py
+   python startup.py
    ```
 
 4. **Launch the Dashboard**:
    ```bash
    streamlit run app.py
    ```
-   *The Oracle UI will instantly pop open in your browser!*
+   *The Oracle UI will instantly pop open in your browser fueled by Live ESPN API Data!*
