@@ -580,6 +580,8 @@ def perform_end_to_end_pipeline():
     if final_df is not None:
         final_df['date'] = pd.to_datetime(final_df['date'], format='mixed', errors='coerce')
         final_df = final_df.dropna(subset=['date']).sort_values(by=['date', 'match_id', 'innings', 'over', 'ball'])
+        # FIX: Deduplicate identical deliveries (some JSONs were duplicated in the dataset)
+        final_df = final_df.drop_duplicates(subset=['match_id', 'innings', 'over', 'ball'])
 
         player_match = extract_player_features(final_df)
         feature_engineer_match_winner(final_df, player_match)
