@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+joblib
+scikit-learn
+requests
+plotly
+streamlit-autorefresh
+lightgbm
+xgboost
+catboost
