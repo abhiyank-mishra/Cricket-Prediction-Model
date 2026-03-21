@@ -8,9 +8,9 @@ Data/*.zip
 Data/**/*.zip
 
 # Machine Learning Serialized Models & Artifacts
-# We ignore these because retraining locally handles them!
-models/*.pkl
-models/*.csv
+# Allow pushing models so Streamlit Cloud can use them!
+# models/*.pkl
+# models/*.csv
 catboost_info/
 
 # Python Cache & Bytecode
